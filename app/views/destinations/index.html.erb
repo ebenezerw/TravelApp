@@ -1,0 +1,18 @@
+<% @destination.each do |destination| %>
+<div>
+    <h2><%= destination.place %></h2>
+    <%= destination.traveler_name %>
+    <p>
+        <%= destination.social_link %>
+        <p>
+            Start:
+            <%= destination.start_date %>
+        </p>
+        End:
+        <%= destination.end_date %>
+        <p>
+            <%= destination.intro %>
+        </p>
+    </div>
+
+    <% end %>

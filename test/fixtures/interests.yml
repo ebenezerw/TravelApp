@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  traveler_name: MyString
+  social_link: MyString
+  start_date: 2017-02-24
+  end_date: 2017-02-24
+  comment: MyText
+  destination: one
+
+two:
+  traveler_name: MyString
+  social_link: MyString
+  start_date: 2017-02-24
+  end_date: 2017-02-24
+  comment: MyText
+  destination: two
