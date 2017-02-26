@@ -1,0 +1,17 @@
+<div class="well">
+<h3> Express interest</h3>
+<%= form_for ([@destination, @destination.interests.build]) do |interest_form| %>
+Your Name: <%= interest_form.text_field :traveler_name %><p>
+<p>Social Link: <%= interest_form.text_field :social_link %><p>
+Arrive: <%= interest_form.date_select :start_date, :order => [:month, :day, :year] %><p>
+Depart: <%= interest_form.date_select :end_date, :order => [:month, :day, :year] %><p>
+Shout Out: <%= interest_form.text_field :comment %><p>
+
+
+<%= interest_form.button %>
+</div>
+
+<% end %>
+
+
+<!-- Interest(id: integer, traveler_name: string, social_link: string, start_date: date, end_date: date, comment: text, destination_id: integer, created_at: datetime, updated_at: datetime) -->
