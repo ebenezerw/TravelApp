@@ -1,6 +1,6 @@
 <% @destination.each do |destination| %>
-<div>
-    <h2><%= destination.place %></h2>
+<div class="well">
+    <h2><%= link_to destination.place, destination_path(destination) %></h2>
     <%= destination.traveler_name %>
     <p>
         <%= destination.social_link %>

@@ -1,0 +1,14 @@
+<%= form_for :destination, url: destinations_path do |destination_form| %>
+  Place: <%= destination_form.text_field :place %><p>
+  Your Name: <%= destination_form.text_field :traveler_name %><p>
+  Social Link: <%= destination_form.text_field :social_link %><p>
+  Arrive: <%= destination_form.date_select :start_date, :order => [:month, :day, :year] %><p>
+  Depart: <%= destination_form.date_select :end_date, :order => [:month, :day, :year] %><p>
+  About Trip: <%= destination_form.text_field :intro %><p>
+
+
+  <%= destination_form.button %>
+<% end %>
+
+
+<!-- Destination(id: integer, place: string, traveler_name: string, social_link: string, start_date: date, end_date: date, intro: text, created_at: datetime, updated_at: datetime) -->
