@@ -1,4 +1,7 @@
 <h3>Edit Interest</h3>
+<% flash.each do |key, value| %>
+<div class="alert alert-info"><%= alert %></div>
+<% end %>
 
 <%= form_for [@destination, @interest] do |interest_form| %>
 

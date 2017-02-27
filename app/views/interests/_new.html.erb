@@ -1,5 +1,8 @@
 <div class="well">
-<h3> Express interest</h3>
+<h3> Express Interest</h3>
+<% flash.each do |key, value| %>
+<div class="alert alert-info"><%= alert %></div>
+<% end %>
 <%= form_for ([@destination, @destination.interests.build]) do |interest_form| %>
 Your Name: <%= interest_form.text_field :traveler_name %><p>
 <p>Social Link: <%= interest_form.text_field :social_link %><p>

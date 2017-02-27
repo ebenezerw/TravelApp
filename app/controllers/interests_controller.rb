@@ -3,7 +3,12 @@ class InterestsController < ApplicationController
   def create
     @destination = Destination.find(params[:destination_id])
     @interest = @destination.interests.create(interest_params)
+    if(@interest.save)
     redirect_to @destination
+  else
+    flash[:alert] = 'All Fields are required. You must enter your name, date of travel and tell us about your trip.'
+    redirect_to @destination
+  end
 
   end
 
@@ -15,8 +20,12 @@ class InterestsController < ApplicationController
   def update
     @destination = Destination.find(params[:destination_id])
     @interest = Interest.find(params[:id])
-    @interest.update(interest_params)
+    if(@interest.update(interest_params))
     redirect_to @destination
+  else
+        flash[:alert] = 'All Fields are required. You must enter your name, date of travel and tell us about your trip.'
+        render 'interests/edit'
+  end
   end
 
   def destroy

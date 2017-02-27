@@ -4,5 +4,6 @@ class Destination < ApplicationRecord
   validates :start_date,  presence: true
   validates :end_date,  presence: true
 
+
   has_many :interests, dependent: :destroy
 end

@@ -13,7 +13,7 @@ class DestinationsController < ApplicationController
 
     def create
         @destination = Destination.create(destination_params.merge(traveler_name: current_user.name))
-        if @destination.save
+        if (@destination.save)
             redirect_to @destination
         else
             flash[:alert] = 'All Fields are required. You must enter your name, destination, date of travel and tell us about your trip.'
@@ -29,7 +29,7 @@ class DestinationsController < ApplicationController
     def update
         @destination = Destination.find(params[:id])
         @destination.update(destination_params)
-        if @destination.save
+        if (@destination.save)
             redirect_to @destination
         else
             flash[:alert] = 'All Fields are required. You must enter your name, destination, date of travel and tell us about your trip.'
