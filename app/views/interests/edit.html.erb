@@ -1,0 +1,12 @@
+<h3>Edit Interest</h3>
+
+<%= form_for [@destination, @interest] do |interest_form| %>
+
+  Your Name: <%= interest_form.text_field :traveler_name %><p>
+  <p>Social Link: <%= interest_form.text_field :social_link %><p>
+  Arrive: <%= interest_form.date_select :start_date, :order => [:month, :day, :year] %><p>
+  Depart: <%= interest_form.date_select :end_date, :order => [:month, :day, :year] %><p>
+  Shout Out: <%= interest_form.text_field :comment %><p>
+  <%= interest_form.button %>
+
+<% end %>

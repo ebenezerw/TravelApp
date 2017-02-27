@@ -6,6 +6,28 @@ class InterestsController < ApplicationController
     redirect_to @destination
 
   end
+
+  def edit
+    @destination = Destination.find(params[:destination_id])
+    @interest = @destination.interests.find(params[:id])
+  end
+
+  def update
+    @destination = Destination.find(params[:destination_id])
+    @interest = Interest.find(params[:id])
+    @interest.update(interest_params)
+    redirect_to @destination
+  end
+
+  def destroy
+    @destination = Destination.find(params[:destination_id])
+    @interest = Interest.find(params[:id])
+    @interest.destroy
+    redirect_to @destination
+
+  end
+
+
 private
 
 def interest_params
