@@ -10,6 +10,105 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
+ *= require normalize-rails
+  *= require_self
  *= require_tree .
- *= require_self
- */
+*/
+
+
+body {
+    background-color: #333;
+    width: 100%;
+    min-height: 100vh;
+    margin: 0 auto;
+    font-family: 'Open Sans', sans-serif;
+    padding: 0;
+}
+
+.wholePage {
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: space-around;
+}
+
+.well {
+    background-color: white;
+    border-radius: 1%;
+    min-height: 200px;
+    min-width: 410px;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    /*justify-content: space-around;*/
+    flex-direction: column;
+    font-size: 12px;
+    background-image: url("napa.jpg");
+	background-size: cover;
+}
+
+h2 {
+  font-size: 20px;
+  color: white;
+}
+
+h3 {
+  font-size: 12px;
+  margin: 5px;
+  color: white;
+}
+
+
+/* Remove margins and padding from the list, and add a black background color */
+
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    /*border-bottom-style: outset;*/
+}
+
+
+/* Float the list items side by side */
+
+ul.topnav li {
+    float: left;
+}
+
+ul.topnav .userInfo {
+    float: right;
+}
+
+
+/* Style the links inside the list items */
+
+ul.topnav li a {
+    display: inline-block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 14px;
+}
+
+
+/* Change background color of links on hover */
+
+ul.topnav li a:hover {
+    background-color: #555;
+}
+
+
+/* Hide the list item that contains the link that should open and close the topnav on small screens */
+
+ul.topnav li.icon {
+    display: none;
+}
+
+hr{
+  margin-top: 0;
+}
