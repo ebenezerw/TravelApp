@@ -8,11 +8,12 @@ class DestinationsController < ApplicationController
     end
 
     def new
+
      end
 
-    def create
-        @destination = Destination.create(destination_params)
 
+    def create
+        @destination = Destination.create(destination_params.merge(traveler_name: current_user.name))
         redirect_to @destination
       end
 
@@ -37,5 +38,10 @@ class DestinationsController < ApplicationController
 
     def destination_params
         params.require(:destination).permit(:place, :traveler_name, :social_link, :start_date, :end_date, :intro)
+      end
+
+      def set_auth
+        @auth = session[:omniauth] if session[:omniauth]
+
       end
 end
