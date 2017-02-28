@@ -18,7 +18,7 @@ class DestinationsController < ApplicationController
      end
 
     def create
-        @destination = current_user.destinations.create!(destination_params.merge(traveler_name: current_user.name, social_link: current_user.url))
+        @destination = current_user.destinations.create!(destination_params)
         if @destination.save
             redirect_to @destination
         else
@@ -30,6 +30,7 @@ class DestinationsController < ApplicationController
 
     def edit
         @destination = Destination.find(params[:id])
+  
      end
 
     def update
@@ -52,7 +53,7 @@ class DestinationsController < ApplicationController
     private
 
     def destination_params
-        params.require(:destination).permit(:place, :traveler_name, :social_link, :start_date, :end_date, :intro)
+        params.require(:destination).permit(:place, :start_date, :end_date, :intro)
       end
 
     def set_auth

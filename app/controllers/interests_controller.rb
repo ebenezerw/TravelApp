@@ -40,7 +40,7 @@ class InterestsController < ApplicationController
 private
 
 def interest_params
-  params.require(:interest).permit(:traveler_name, :social_link, :start_date, :end_date, :comment)
+  params.require(:interest).permit(:start_date, :end_date, :comment).merge(user: current_user)
 
 end
 

@@ -10,34 +10,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170228035412) do
+ActiveRecord::Schema.define(version: 20170228201328) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "destinations", force: :cascade do |t|
     t.string   "place"
-    t.string   "traveler_name"
-    t.string   "social_link"
     t.date     "start_date"
     t.date     "end_date"
     t.text     "intro"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.integer  "user_id"
     t.index ["user_id"], name: "index_destinations_on_user_id", using: :btree
   end
 
   create_table "interests", force: :cascade do |t|
-    t.string   "traveler_name"
-    t.string   "social_link"
     t.date     "start_date"
     t.date     "end_date"
     t.text     "comment"
     t.integer  "destination_id"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
+    t.integer  "user_id"
     t.index ["destination_id"], name: "index_interests_on_destination_id", using: :btree
+    t.index ["user_id"], name: "index_interests_on_user_id", using: :btree
   end
 
   create_table "users", force: :cascade do |t|
@@ -53,4 +51,5 @@ ActiveRecord::Schema.define(version: 20170228035412) do
 
   add_foreign_key "destinations", "users"
   add_foreign_key "interests", "destinations"
+  add_foreign_key "interests", "users"
 end

@@ -6,8 +6,6 @@
 <div class="alert"><%= alert %></div>
 <% end %>
 <%= form_for ([@destination, @destination.interests.build]) do |interest_form| %>
-<h3>Your Name: <%= interest_form.text_field :traveler_name %></h3>
-<h3>Social Link: <%= interest_form.text_field :social_link %></h3>
 <h3>Arrive: <%= interest_form.date_select :start_date, :order => [:month, :day, :year] %></h3>
 <h3>Depart: <%= interest_form.date_select :end_date, :order => [:month, :day, :year] %></h3>
 <h3>Shout Out: <%= interest_form.text_field :comment %></h3>
@@ -15,6 +13,3 @@
 </div>
 
 <% end %>
-
-
-<!-- Interest(id: integer, traveler_name: string, social_link: string, start_date: date, end_date: date, comment: text, destination_id: integer, created_at: datetime, updated_at: datetime) -->

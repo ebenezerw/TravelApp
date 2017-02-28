@@ -4,4 +4,5 @@ class Interest < ApplicationRecord
   validates :comment, presence: true, length: {minimum: 3}
 
   belongs_to :destination
+  belongs_to :user
 end

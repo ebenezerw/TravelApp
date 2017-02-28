@@ -17,5 +17,5 @@ def self.create_user_from_omniauth(auth)
 end
 
 has_many :destinations
-
+has_many :interests
 end
