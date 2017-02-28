@@ -1,21 +1,19 @@
 <% flash.each do |key, value| %>
-<div class="alert alert-info"><%= alert %></div>
+<div class="alert"><%= alert %></div>
 <% end %>
-
+<div class="showPage">
 <%= form_for :destination, url: destinations_path do |destination_form| %>
 Place:
 <%= destination_form.text_field :place %>
-<p>
+Arrive:
+<%= destination_form.date_select :start_date, :order => [:month, :day, :year] %>
 
-    Arrive:
-    <%= destination_form.date_select :start_date, :order => [:month, :day, :year] %>
-    <p>
-        Depart:
-        <%= destination_form.date_select :end_date, :order => [:month, :day, :year] %>
-        <p>
-            About Trip:
-            <%= destination_form.text_field :intro %>
-            <p>
+Depart:
+<%= destination_form.date_select :end_date, :order => [:month, :day, :year] %>
 
-                <%= destination_form.button %>
-                <% end %>
+About Trip:
+<%= destination_form.text_field :intro %>
+
+<%= destination_form.button %>
+</div>
+<% end %>

@@ -6,6 +6,9 @@ Rails.application.routes.draw do
   get '/auth/:provider/callback', to: 'sessions#create'
   get 'auth/failure', to: redirect('/')
   delete 'sign_out', to: "sessions#destroy", as: 'sign_out'
+  post 'destinations/search' => 'destinations#search', as: 'search_destinations'
+
+
 
 
 

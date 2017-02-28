@@ -1,7 +1,13 @@
 class DestinationsController < ApplicationController
+    def search
+        @q = "%#{params[:query]}%"
+        @destinations = Destination.where('place ILIKE ? or intro ILIKE ?', @q, @q)
+        render 'index'
+    end
+
     def index
-        @destination = Destination.all
-      end
+        @destinations = Destination.all
+          end
 
     def show
         @destination = Destination.find(params[:id])
@@ -12,8 +18,8 @@ class DestinationsController < ApplicationController
      end
 
     def create
-        @destination = Destination.create(destination_params.merge(traveler_name: current_user.name, social_link: current_user.url))
-        if (@destination.save)
+        @destination = current_user.destinations.create!(destination_params.merge(traveler_name: current_user.name, social_link: current_user.url))
+        if @destination.save
             redirect_to @destination
         else
             flash[:alert] = 'All Fields are required. You must enter your name, destination, date of travel and tell us about your trip.'
@@ -29,7 +35,7 @@ class DestinationsController < ApplicationController
     def update
         @destination = Destination.find(params[:id])
         @destination.update(destination_params)
-        if (@destination.save)
+        if @destination.save
             redirect_to @destination
         else
             flash[:alert] = 'All Fields are required. You must enter your name, destination, date of travel and tell us about your trip.'

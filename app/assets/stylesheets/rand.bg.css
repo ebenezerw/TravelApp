@@ -1,0 +1,28 @@
+/*
+    Created on : Jan 6, 2014, 11:30:38 PM
+    Author     : Masud Afsar <masud.afsar@live.com>
+*/
+
+
+.randbg {
+background: url('3.jpg') no-repeat center center fixed;
+background-size: cover;
+}
+.randbg.bg1 {
+background-image: url('1.jpg');
+}
+.randbg.bg2 {
+background-image: url('2.jpg');
+}
+.randbg.bg3 {
+background-image: url('3.jpg');
+}
+.randbg.bg4 {
+background-image: url('4.jpg');
+}
+.randbg.bg5 {
+background-image: url('5.jpg');
+}
+.randbg.bg6 {
+background-image: url('6.jpg');
+}

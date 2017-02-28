@@ -1,13 +1,15 @@
+<div class="wholePage">
+<% @destinations.each do |destination| %>
+<div class="well randbg">
+  <%= image_tag destination.user.image_url %>
+  <div class="destinationName"> <p><%= link_to destination.place, destination_path(destination) %></p>
 
-
-<% @destination.each do |destination| %>
-<div class="well">
-  <div class="destinationName"> <p><%= link_to destination.place, destination_path(destination) %></p></div>
-    <h3><%= destination.traveler_name %></h3>
-        <h3><%= link_to "View Facebook Profile", destination.social_link, target: :_blank %></h3>
+    <h3><%= destination.user.name%></h3>
+        <h3><%= link_to "View Facebook Profile", destination.user.url, target: :_blank %></h3>
             <h3>Arrive: <%= destination.start_date %></h3>
         <h3>Depart: <%= destination.end_date %></h3>
-            <h3><%= destination.intro %></h3>
+            <h3><%= destination.intro %></h3></div>
 
 </div>
     <% end %>
+</div>
