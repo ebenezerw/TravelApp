@@ -8,7 +8,8 @@ def self.create_user_from_omniauth(auth)
   create(
   provider: auth['provider'],
   uid: auth['uid'],
-  name: auth['info'] ['name']
+  name: auth['info'] ['name'],
+  gender: auth['info'] ['gender']
   )
 
 end

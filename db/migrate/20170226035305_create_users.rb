@@ -7,7 +7,7 @@ class CreateUsers < ActiveRecord::Migration[5.0]
       t.string :link
       t.string :gender
       t.string :locale
-      t.string :picture
+      t.string :image
       t.string :age_range
 
       t.timestamps

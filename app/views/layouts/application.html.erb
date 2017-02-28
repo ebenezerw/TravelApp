@@ -3,7 +3,6 @@
     <head>
         <title>Travel With Friends</title>
         <%= csrf_meta_tags %>
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
         <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
         <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     </head>
@@ -12,7 +11,7 @@
         <header>
             <nav>
   <ul class="topnav" id="" myTopnav">
-                    <li><%= link_to "Home", destinations_path %></li>
+                    <li class="logo"><%= link_to "Travel With Friends", destinations_path %></li>
                     <li><%= link_to "Create New Destination", new_destination_path %></li>
 
                     <% if current_user %>

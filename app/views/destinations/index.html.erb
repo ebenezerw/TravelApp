@@ -2,7 +2,7 @@
 
 <% @destination.each do |destination| %>
 <div class="well">
-  <h2><%= link_to destination.place, destination_path(destination) %></h2>
+  <div class="destinationName"> <h2><%= link_to destination.place, destination_path(destination) %></h2></div>
     <h3><%= destination.traveler_name %></h3>
         <h3><%= destination.social_link %></h3>
             <h3>Start: <%= destination.start_date %></h3>
