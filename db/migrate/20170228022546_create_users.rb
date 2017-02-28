@@ -4,11 +4,9 @@ class CreateUsers < ActiveRecord::Migration[5.0]
       t.string :provider
       t.string :uid
       t.string :name
-      t.string :link
-      t.string :gender
-      t.string :locale
-      t.string :image
-      t.string :age_range
+      t.string :location
+      t.string :image_url
+      t.string :url
 
       t.timestamps
     end

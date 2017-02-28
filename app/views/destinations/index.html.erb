@@ -2,11 +2,11 @@
 
 <% @destination.each do |destination| %>
 <div class="well">
-  <div class="destinationName"> <h2><%= link_to destination.place, destination_path(destination) %></h2></div>
+  <div class="destinationName"> <p><%= link_to destination.place, destination_path(destination) %></p></div>
     <h3><%= destination.traveler_name %></h3>
-        <h3><%= destination.social_link %></h3>
-            <h3>Start: <%= destination.start_date %></h3>
-        <h3>End: <%= destination.end_date %></h3>
+        <h3><%= link_to "View Facebook Profile", destination.social_link, target: :_blank %></h3>
+            <h3>Arrive: <%= destination.start_date %></h3>
+        <h3>Depart: <%= destination.end_date %></h3>
             <h3><%= destination.intro %></h3>
 
 </div>

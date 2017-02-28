@@ -12,7 +12,7 @@ class DestinationsController < ApplicationController
      end
 
     def create
-        @destination = Destination.create(destination_params.merge(traveler_name: current_user.name))
+        @destination = Destination.create(destination_params.merge(traveler_name: current_user.name, social_link: current_user.url))
         if (@destination.save)
             redirect_to @destination
         else

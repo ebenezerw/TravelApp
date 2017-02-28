@@ -23,6 +23,7 @@ body {
     margin: 0 auto;
     font-family: 'Open Sans', sans-serif;
     padding: 0;
+    text-decoration: none;
 }
 
 .wholePage {
@@ -54,12 +55,18 @@ body {
   min-width: 410px;
   max-width: 410px;
   text-align: center;
+  padding: 0;
 
 }
 
-h2 {
+p {
   font-size: 20px;
-  color: white;
+  margin: 1px;
+  text-decoration: none;
+}
+
+a {
+	text-decoration: none;
 }
 
 h3 {
@@ -112,6 +119,11 @@ ul.topnav li a:hover {
     background-color: #555;
 }
 
+img{
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+}
 
 /* Hide the list item that contains the link that should open and close the topnav on small screens */
 

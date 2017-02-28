@@ -17,7 +17,7 @@
                     <% if current_user %>
 
           <li class="userInfo"><%= link_to "Sign Out", 'sign_out', method: :delete %></li>
-            <li class="userInfo"> <%= link_to current_user.name, users_show_path(current_user) %></li>
+            <li class="userInfo"><%= link_to current_user.name, users_show_path(current_user) %></li>
 
                 <% else %>
                     <li class="userInfo"><%= link_to "auth/facebook" do %>Sign In With Facebook<% end %></li>
