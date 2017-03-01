@@ -10,39 +10,32 @@
     <body>
         <header>
             <nav>
-  <ul class="topnav" id="" myTopnav">
-                    <li class="logo"><%# image_tag ("IMG_0916.PNG") %> <%= link_to "Travel With Friends", destinations_path %></li>
+                <ul class="topnav" id= "myTopnav">
+                    <li><%= image_tag "logo.png" %></li><li>
+                        <%= link_to "Travel With Friends", destinations_path %></li>
                     <li><%= link_to "Create New Destination", new_destination_path %></li>
-                  <li class="searchForm">  <%= form_tag search_destinations_path do %>
-                    <input class="search full-width" id="searchbar" name="query" placeholder="Search Destinations" type="text">
-                    <%= submit_tag "Search", :place => nil %>
-                    <% end %></li>
+                    <li class="searchForm">
+                        <%= form_tag search_destinations_path do %>
+                        <input class="search full-width" id="searchbar" name="query" placeholder="Search Destinations" type="text">
+                        <%= submit_tag "Search", :place => nil %></li>
+                        <% end %>
 
                     <% if current_user %>
 
-          <li class="userInfo"><%= link_to "Sign Out", 'sign_out', method: :delete %></li>
-            <li class="userInfo"><%= link_to current_user.name, users_show_path(current_user) %></li>
+                    <li class="userInfo"><%= link_to "Sign Out", 'sign_out', method: :delete %></li>
+                    <li class="userInfo"><%= link_to current_user.name, destinations_path %></li><%= image_tag current_user.image_url %>
+
 
                 <% else %>
                     <li class="userInfo"><%= link_to "auth/facebook" do %>Sign In With Facebook<% end %></li>
                     <% end %>
-                    <li class="icon"><a href="javascript:void(0);" onclick="myFunction()">&#9776;</a></li>
-      </ul>
-    </nav>
-</header>
-<hr>
+                </ul>
+            </nav>
+        </header>
+
+        <%= yield %>
 
 
-    <%= yield %>
-
-<script>
-$(".randbg").RandBG({
-ClassPrefix: "bg",
-count: 10
-});
-</script>
-
-</body>
-
+    </body>
 
 </html>

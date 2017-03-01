@@ -16,11 +16,12 @@
 //= require_tree .
 
 /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
-function myFunction() {
-    var x = document.getElementById("myTopnav");
-    if (x.className === "topnav") {
-        x.className += " responsive";
-    } else {
-        x.className = "topnav";
-    }
-};
+
+<script type="text/javascript">
+           function ran_col() { //function name
+               var color = '#'; // hexadecimal starting symbol
+               var letters = ['000000','FF0000','00FF00','0000FF','FFFF00','00FFFF','FF00FF','C0C0C0']; //Set your colors here
+               color += letters[Math.floor(Math.random() * letters.length)];
+               document.getElementsByClassName('well').style.background = color; // Setting the random color on your div element.
+           }
+       </script>
