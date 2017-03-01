@@ -53,6 +53,20 @@ body {
     font-size: 16px;
     padding-top: 5px;
     background-color: #5c7389;
+    position: absolute;
+    top: 6em;
+    overflow: auto;
+}
+
+.pagewrapper{
+  position: relative;
+  top: 6em;
+  width: 90%;
+  margin: 0 auto;
+  background-color: rgba(0, 0, 0, 0.5);
+
+
+  /*overflow: auto;*/
 }
 
 .well {
@@ -146,6 +160,11 @@ body {
     margin-top: 5px;
 }
 
+.interestdiv {
+  border-bottom: 1px white solid;
+  padding: 2px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
 p {
     font-size: 23px;
     margin: 1px;
@@ -233,4 +252,14 @@ img {
 
 hr {
     margin-top: 0;
+}
+
+input[type=button], input[type=submit], input[type=reset] {
+    background-color: rgba(76, 175, 80, 1);
+    border: none;
+    color: white;
+    padding: 4px 20px;
+    text-decoration: bold;
+    cursor: pointer;
+    border-radius: 1px;
 }
