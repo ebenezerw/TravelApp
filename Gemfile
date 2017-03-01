@@ -6,10 +6,6 @@ git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
   "https://github.com/#{repo_name}.git"
 end
-<<<<<<< HEAD
-
-=======
->>>>>>> 7f60134886df6fb8e4b88ea709e8ceb78bad750c
 
 gem 'omniauth-facebook'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
