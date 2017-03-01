@@ -15,14 +15,13 @@
  *= require_tree .
 */
 
-@import url('https://fonts.googleapis.com/css?family=Open+Sans Rochester');
-
+@import url('https://fonts.googleapis.com/css?family=Open+Sans | Oxygen');
 body {
     background-color: #edefec;
     width: 100%;
     min-height: 100vh;
     margin: 0 auto;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Oxygen', sans-serif;
     padding: 0;
     text-decoration: none;
 }
@@ -33,25 +32,27 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     align-content: space-around;
+    position: absolute;
+    top: 6em;
+    overflow: auto;
 }
 
 .showPage {
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-content: space-around;
-  border-radius: 1%;
-  min-height: 200px;
-  min-width: 75%;
-  margin: 5px;
-  display: flex;
-  align-items: center;
-  /*justify-content: space-around;*/
-  flex-direction: column;
-  font-size: 16px;
-  padding-top: 5px;
-  background-color: #5c7389;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: space-around;
+    border-radius: 1%;
+    min-height: 200px;
+    min-width: 75%;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 16px;
+    padding-top: 5px;
+    background-color: #5c7389;
 }
 
 .well {
@@ -62,16 +63,82 @@ body {
     margin: 5px;
     display: flex;
     align-items: center;
-    /*justify-content: space-around;*/
     flex-direction: column;
     font-size: 12px;
     padding-top: 5px;
     border: 1px white solid;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px transparent;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+}
 
+/*shrink div on hover*/
+.well:hover {
+    -webkit-transform: scale(.9);
+    transform: scale(.97);
 }
 
 
-.destinationName {
+/*css to pick random background image*/
+
+.well.color-1 {
+    background-image: url("1.jpg");
+    background-size: cover;
+}
+
+.well.color-2 {
+    background-image: url("2.jpg");
+    background-size: cover;
+}
+
+.well.color-3 {
+    background-image: url("3.jpg");
+    background-size: cover;
+}
+
+.well.color-4 {
+    background-image: url("4.jpg");
+    background-size: cover;
+}
+
+.well.color-5 {
+    background-image: url("5.jpg");
+    background-size: cover;
+}
+
+.well.color-6 {
+    background-image: url("6.jpg");
+    background-size: cover;
+}
+
+.well.color-7 {
+    background-image: url("7.jpg");
+    background-size: cover;
+}
+
+
+/*css to pick random background colors*/
+
+
+/*
+.well.color-1 { background-color: #df494e;}
+.well.color-2 { background-color: #68a5b7;}
+.well.color-3 { background-color: #8f978e;}
+.well.color-4 { background-color: #d8b6ad;}
+.well.color-5 { background-color: #677b94;}
+.well.color-6 { background-color: #677b94;}
+.well.color-7 { background-color: #66be98;}
+.well.color-8 { background-color: #fcd06d;}
+.well.color-9 { background-color: #f8a427;}
+.well.color-10 { background-color: #d42b14;}*/
+
+
+
+.tripContent {
     background-color: rgba(0, 0, 0, 0.7);
     min-width: 410px;
     max-width: 410px;
@@ -87,7 +154,7 @@ p {
 }
 
 a {
-  color: white;
+    color: white;
     text-decoration: none;
 }
 
@@ -97,21 +164,26 @@ h3 {
     color: white;
 }
 
-h1{
-  text-align: center;
+h1 {
+    text-align: center;
 }
 
 
-
 /* Remove margins and padding from the list, and add a black background color */
+
+header {
+    position: fixed;
+    width: 100%;
+    margin-bottom: auto;
+    z-index: 1;
+}
 
 ul.topnav {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
-    /*border-bottom-style: outset;*/
+    background-color: rgba(51, 51, 51, .97);
 }
 
 
@@ -126,7 +198,7 @@ ul.topnav .userInfo {
 }
 
 #searchbar {
-    margin: 10px;
+    margin: 30px;
     width: 200px;
 }
 
@@ -137,7 +209,7 @@ ul.topnav li a {
     display: inline-block;
     color: #f2f2f2;
     text-align: center;
-    padding: 14px 16px;
+    padding: 35px 16px;
     text-decoration: none;
     transition: 0.3s;
     font-size: 14px;
@@ -147,7 +219,7 @@ ul.topnav li a {
 /* Change background color of links on hover */
 
 ul.topnav li a:hover {
-    background-color: #555;
+    background-color: rgba(96, 149, 252, 1);
 }
 
 img {
@@ -155,47 +227,10 @@ img {
     height: 60px;
     width: 60px;
     border: 1px white solid;
-}
-
-
-/* Hide the list item that contains the link that should open and close the topnav on small screens */
-
-ul.topnav li.icon {
-    display: none;
+    float: right;
+    margin: 10px;
 }
 
 hr {
     margin-top: 0;
-}
-
-@media screen and (max-width:680px) {
-    ul.topnav li:not(:first-child) {
-        display: none;
-    }
-    ul.topnav li.icon {
-        float: right;
-        display: inline-block;
-    }
-}
-
-
-/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens */
-
-@media screen and (max-width:680px) {
-    ul.topnav.responsive {
-        position: relative;
-    }
-    ul.topnav.responsive li.icon {
-        position: absolute;
-        right: 0;
-        top: 0;
-    }
-    ul.topnav.responsive li {
-        float: none;
-        display: inline;
-    }
-    ul.topnav.responsive li a {
-        display: block;
-        text-align: left;
-    }
 }
