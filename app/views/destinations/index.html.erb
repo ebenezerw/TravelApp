@@ -1,6 +1,6 @@
 <div class="wholePage">
 <% @destinations.each do |destination| %>
-<div class="well randbg">
+<div class="well randbg" >
   <%= image_tag destination.user.image_url %>
   <div class="destinationName"> <p><%= link_to destination.place, destination_path(destination) %></p>
 

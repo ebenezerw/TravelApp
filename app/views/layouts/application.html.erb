@@ -11,7 +11,7 @@
         <header>
             <nav>
   <ul class="topnav" id="" myTopnav">
-                    <li class="logo"><%= link_to "Travel With Friends", destinations_path %></li>
+                    <li class="logo"><%# image_tag ("IMG_0916.PNG") %> <%= link_to "Travel With Friends", destinations_path %></li>
                     <li><%= link_to "Create New Destination", new_destination_path %></li>
                   <li class="searchForm">  <%= form_tag search_destinations_path do %>
                     <input class="search full-width" id="searchbar" name="query" placeholder="Search Destinations" type="text">
