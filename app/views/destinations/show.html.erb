@@ -2,6 +2,7 @@
   <%= image_tag @destination.user.image_url %>
 <p><%= @destination.place %></p>
 <h3><%=  @destination.user.name %></h3>
+<%= link_to "Message me!", conversations_path(sender_id: current_user.id, recipient_id: @destination.user.id), method: :post %>
 
 <h3><%= link_to "View Facebook Profile", @destination.user.url, target: :_blank %></h3>
 
