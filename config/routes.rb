@@ -20,6 +20,8 @@ resources :destinations do
   resources :interests
 end
 
-
+resources :conversations do
+  resources :messages
+ end
 
 end
