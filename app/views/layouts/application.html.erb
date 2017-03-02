@@ -11,9 +11,11 @@
         <header>
             <nav>
                 <ul class="topnav" id= "myTopnav">
+
                     <li><%= image_tag "logo.png" %></li><li>
                         <%= link_to "Travl With Friends", destinations_path %></li>
                     <li><%= link_to "Create New Destination", new_destination_path %></li>
+
                     <li class="searchForm">
                         <%= form_tag search_destinations_path do %>
                         <input class="search full-width" id="searchbar" name="query" placeholder="Search Destinations" type="text">
@@ -27,8 +29,10 @@
 
 
                 <% else %>
+
                     <li class="userInfo"><%= link_to "auth/facebook" do %>Sign In With Facebook<% end %></li>
                     <% end %>
+                    
                 </ul>
             </nav>
         </header>

@@ -222,6 +222,10 @@ ul.topnav .userInfo {
 #searchbar {
     margin: 30px;
     width: 200px;
+    height: 20px;
+    border-radius: 1%;
+    padding: 1px;
+    font-size: 12px;
 }
 
 

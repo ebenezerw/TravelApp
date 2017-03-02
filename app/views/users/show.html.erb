@@ -1,10 +1,14 @@
-<div class="wholePage">
 
   <div class="pagewrapper">
 
-<h4>Profile for: <%= current_user.location %></h4>
-<%= image_tag current_user.image_url %>
-</div>
+<% @users.each do |user| %>
+Name: <%= user.name %>
+Image: <%= image_tag user.image_url %>
+
+<%end %>
+
+
+
 
 </div>
 
