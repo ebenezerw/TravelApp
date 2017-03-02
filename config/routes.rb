@@ -18,6 +18,7 @@ root 'destinations#index'
 
 resources :destinations do
   resources :interests
+
 end
 
 resources :conversations do
