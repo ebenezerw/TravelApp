@@ -1,5 +1,9 @@
 # Travel With Friends
 
+# Demo Facebook Login
+Username: anthony_xrtcamu_bourdain@tfbnw.net
+Password: wdi123
+
 #Description
 Travel With Friend is a social app that allows you to connect with other travelers. Travel allows a user to post upcoming trips, search trips by Destination name or content. Users have the ability to express Interest in trips posted by others. Since each Travel user signs up with their social account, Travel also allows both parties to quickly connect through Facebook. Currently in beta, travelers will be able to send private messages directly through the application.
 
