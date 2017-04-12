@@ -1,19 +1,19 @@
-
 <h1>Interests</h1>
 <% @destination.interests.each do |interest| %>
 <div class="interestdiv">
-  <%= image_tag interest.user.image_url %>
-  <h3><%= interest.user.name %></h3>
-  <h3><%= link_to "View Facebook Profile", interest.user.url, target: :_blank %></h3>
-  <h3><%= interest.start_date %></h3>
-  <h3><%= interest.end_date %></h3>
-  <h3><%= interest.comment %> </h3>
+    <%= image_tag interest.user.image_url %>
+    <h3><%= interest.user.name %></h3>
+    <h3><%= link_to "View Facebook Profile", interest.user.url, target: :_blank %></h3>
+    <h3><%= interest.start_date %></h3>
+    <h3><%= interest.end_date %></h3>
+    <h3><%= interest.comment %>
+    </h3>
 
-  <% if interest.user == current_user %>
-  <h3><%= link_to "edit interest", edit_destination_interest_path(@destination, interest) %></h3>
+    <% if interest.user == current_user %>
+    <h3><%= link_to "edit interest", edit_destination_interest_path(@destination, interest) %></h3>
     <h3><%= link_to "delete interest", [interest.destination, interest], method: :delete, data: {confirm: "Are you sure you?"} %></h3>
 
     <% end %>
-  </div>
+</div>
 
 <% end %>

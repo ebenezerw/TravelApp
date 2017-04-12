@@ -1,15 +1,17 @@
-
 <h1>Express Interest</h1>
 
 <% flash.each do |key, value| %>
 <div class="alert"><%= alert %></div>
 <% end %>
 <div class="interestdiv">
-<%= form_for ([@destination, @destination.interests.build]) do |interest_form| %>
-<h3>Arrive: <%= interest_form.date_select :start_date, :order => [:month, :day, :year] %></h3>
-<h3>Depart: <%= interest_form.date_select :end_date, :order => [:month, :day, :year] %></h3>
-<h3>Shout Out: <%= interest_form.text_field :comment %></h3>
-<%= interest_form.button %>
+    <%= form_for ([@destination, @destination.interests.build]) do |interest_form| %>
+    <h3>Arrive:
+        <%= interest_form.date_select :start_date, :order => [:month, :day, :year] %></h3>
+    <h3>Depart:
+        <%= interest_form.date_select :end_date, :order => [:month, :day, :year] %></h3>
+    <h3>Shout Out:
+        <%= interest_form.text_field :comment %></h3>
+    <%= interest_form.button %>
 </div>
 
 <% end %>

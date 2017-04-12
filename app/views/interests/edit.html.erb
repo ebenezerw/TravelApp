@@ -5,9 +5,15 @@
 
 <%= form_for [@destination, @interest] do |interest_form| %>
 
-  Arrive: <%= interest_form.date_select :start_date, :order => [:month, :day, :year] %><p>
-  Depart: <%= interest_form.date_select :end_date, :order => [:month, :day, :year] %><p>
-  Shout Out: <%= interest_form.text_field :comment %><p>
-  <%= interest_form.button %>
+Arrive:
+<%= interest_form.date_select :start_date, :order => [:month, :day, :year] %>
+<p>
+    Depart:
+    <%= interest_form.date_select :end_date, :order => [:month, :day, :year] %>
+    <p>
+        Shout Out:
+        <%= interest_form.text_field :comment %>
+        <p>
+            <%= interest_form.button %>
 
-<% end %>
+            <% end %>

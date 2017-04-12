@@ -14,16 +14,6 @@
   *= require_self
  *= require_tree .
 */
-.chat{
-  margin-top: 50px;
-  background-color: green;
-  padding: 25px;
-}
-
-.hide {
-  display: none;
-}
-
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans | Oxygen');
 body {
@@ -34,6 +24,17 @@ body {
     font-family: 'Oxygen', sans-serif;
     padding: 0;
     text-decoration: none;
+}
+
+.chat {
+    margin-top: 50px;
+    background-color: #5c7389;
+    padding: 25px;
+    color: white;
+}
+
+.hide {
+    display: none;
 }
 
 .wholePage {
@@ -68,15 +69,13 @@ body {
     overflow: auto;
 }
 
-.pagewrapper{
-  position: relative;
-  top: 6em;
-  width: 90%;
-  margin: 0 auto;
-  background-color: rgba(0, 0, 0, 0.5);
-
-
-  /*overflow: auto;*/
+.pagewrapper {
+    position: relative;
+    top: 6em;
+    width: 90%;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    /*overflow: auto;*/
 }
 
 .well {
@@ -91,7 +90,6 @@ body {
     font-size: 12px;
     padding-top: 5px;
     border: 1px white solid;
-
     background-color: #5c7389;
     -webkit-transform: perspective(1px) translateZ(0);
     transform: perspective(1px) translateZ(0);
@@ -102,12 +100,13 @@ body {
     transition-property: transform;
 }
 
+
 /*shrink div on hover*/
+
 .well:hover {
     -webkit-transform: scale(.9);
     transform: scale(.97);
 }
-
 
 
 /*css to pick random background image*/
@@ -147,24 +146,6 @@ body {
     background-size: cover;
 }
 
-
-/*css to pick random background colors*/
-
-
-/*
-.well.color-1 { background-color: #df494e;}
-.well.color-2 { background-color: #68a5b7;}
-.well.color-3 { background-color: #8f978e;}
-.well.color-4 { background-color: #d8b6ad;}
-.well.color-5 { background-color: #677b94;}
-.well.color-6 { background-color: #677b94;}
-.well.color-7 { background-color: #66be98;}
-.well.color-8 { background-color: #fcd06d;}
-.well.color-9 { background-color: #f8a427;}
-.well.color-10 { background-color: #d42b14;}*/
-
-
-
 .tripContent {
     background-color: rgba(0, 0, 0, 0.7);
     min-width: 410px;
@@ -174,10 +155,11 @@ body {
 }
 
 .interestdiv {
-  border-bottom: 1px white solid;
-  padding: 2px;
-  background-color: rgba(0, 0, 0, 0.5);
+    border-bottom: 1px white solid;
+    padding: 2px;
+    background-color: rgba(0, 0, 0, 0.5);
 }
+
 p {
     font-size: 23px;
     margin: 1px;
@@ -203,12 +185,6 @@ h1 {
 
 /* Remove margins and padding from the list, and add a black background color */
 
-/*header {
-    position: fixed;
-    width: 100%;
-    margin-bottom: auto;
-    z-index: 1;
-}*/
 
 ul.topnav {
     list-style-type: none;

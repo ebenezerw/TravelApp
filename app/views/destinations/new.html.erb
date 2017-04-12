@@ -2,18 +2,18 @@
 <div class="alert"><%= alert %></div>
 <% end %>
 <div class="showPage">
-<%= form_for :destination, url: destinations_path do |destination_form| %>
-Place:
-<%= destination_form.text_field :place %>
-Arrive:
-<%= destination_form.date_select :start_date, :order => [:month, :day, :year] %>
+    <%= form_for :destination, url: destinations_path do |destination_form| %>
+    Place:
+    <%= destination_form.text_field :place %>
+    Arrive:
+    <%= destination_form.date_select :start_date, :order => [:month, :day, :year] %>
 
-Depart:
-<%= destination_form.date_select :end_date, :order => [:month, :day, :year] %>
+    Depart:
+    <%= destination_form.date_select :end_date, :order => [:month, :day, :year] %>
 
-About Trip:
-<%= destination_form.text_field :intro %>
+    About Trip:
+    <%= destination_form.text_field :intro %>
 
-<%= destination_form.button %>
+    <%= destination_form.button %>
 </div>
 <% end %>
