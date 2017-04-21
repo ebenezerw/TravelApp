@@ -14,7 +14,6 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-     session[:user_id] = user.id
     session[:user_id] = nil
     session[:omniauth] =nil
     redirect_to destinations_path

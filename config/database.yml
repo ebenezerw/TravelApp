@@ -80,6 +80,4 @@ test:
 #
 production:
   <<: *default
-  database: TravelApp_production
-  username: TravelApp
-  password: <%= ENV['TRAVELAPP_DATABASE_PASSWORD'] %>
+    url: <%= ENV['DATABASE_URL'] %>

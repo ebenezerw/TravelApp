@@ -1,9 +1,9 @@
 class ConversationsController < ApplicationController
 
-    # def index
-    #     @users = User.all
-    #     @conversations = Conversation.all
-    #  end
+    def index
+        @users = User.all
+        @conversations = Conversation.all
+     end
 
 
 
